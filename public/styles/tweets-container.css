@@ -6,6 +6,10 @@
   padding: 0em 1em 1em 1em;
 }
 
+.tweets-container:hover {
+  box-shadow: 7px 7px rgba(145, 134, 211, 0.423);
+}
+
 .tweets-container-content {
   width: 100%;
   flex-direction: column;
@@ -43,4 +47,9 @@
 .content-bottom-icons {
   gap: 10px;
   cursor: pointer;
+  color: darkblue;
+}
+
+.content-bottom-icons i:hover {
+  color: gold;
 }

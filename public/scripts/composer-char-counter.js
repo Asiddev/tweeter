@@ -1,6 +1,4 @@
 $("document").ready(function () {
-  console.log("working!");
-
   $("#tweet-text").keyup(function (e) {
     let charactersLeft = 140;
     let charactersUsed = 0;
@@ -21,7 +19,5 @@ $("document").ready(function () {
     } else {
       $("#tweet-count").css("color", "#545149");
     }
-    console.log("counterUsed", charactersUsed);
-    console.log("charatersLeft", charactersLeft);
   });
 });
