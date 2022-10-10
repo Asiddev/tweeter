@@ -1,9 +1,14 @@
-.tweets-container {
+.all-tweets-container {
+  height: 500px;
+}
+
+.single-tweets-container {
   width: 100%;
   height: 225px;
   border: 5px black solid;
   display: flex;
   padding: 0em 1em 1em 1em;
+  margin-bottom: 50px;
 }
 
 .tweets-container:hover {
