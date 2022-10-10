@@ -2,18 +2,26 @@ $("document").ready(function () {
   console.log("working!");
 
   $("#tweet-text").keyup(function (e) {
-    let charactersLeft = 144;
-    let counterUsed = 0;
-    if (counterUsed < charactersLeft) {
+    let charactersLeft = 140;
+    let charactersUsed = 0;
+
+    if (charactersUsed < charactersLeft) {
       if (e.key === "Backspace") {
         charactersLeft -= this.value.length;
-        counterUsed += this.value.length;
+        charactersUsed += this.value.length;
       } else {
         charactersLeft -= this.value.length;
-        counterUsed += this.value.length;
+        charactersUsed += this.value.length;
       }
+
+      $("#tweet-count").val(charactersLeft);
     }
-    console.log("counterUsed", counterUsed);
+    if (charactersLeft < 0) {
+      $("#tweet-count").css("color", "red");
+    } else {
+      $("#tweet-count").css("color", "#545149");
+    }
+    console.log("counterUsed", charactersUsed);
     console.log("charatersLeft", charactersLeft);
   });
 });
