@@ -9,6 +9,6 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
 }
 
-i {
+#write-tweet i {
   color: red;
 }
