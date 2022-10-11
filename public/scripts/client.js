@@ -5,6 +5,11 @@
  */
 
 $("document").ready(function () {
+  //refresh every 60 seconds
+  setInterval(() => {
+    location.reload(true);
+  }, 60000);
+
   $("#tweet-form").submit(function (event) {
     event.preventDefault();
     let data = $(this).serialize().toString().split("=").slice(1);
@@ -27,8 +32,6 @@ $("document").ready(function () {
       $(this).serialize(),
       function (data) {
         console.log(data);
-        $("#tweet-text").val("");
-        $("#tweet-count").val(144);
       }
     );
 
@@ -57,6 +60,12 @@ $("document").ready(function () {
     }
   };
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function (tweet) {
     let $tweet = $(`<div class="single-tweets-container">
     <div class="tweets-container-content">
@@ -70,7 +79,7 @@ $("document").ready(function () {
         </div>
       </div>
       <div class="content-middle">
-      ${tweet.content.text}
+      ${escape(tweet.content.text)}
       </div>
       <div class="content-bottom">
       <div class="bottom-content-date">
