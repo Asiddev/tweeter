@@ -13,6 +13,13 @@ header {
   color: red;
 }
 
+.logo {
+  font-size: 35px;
+}
+
+.username-header {
+  color: #fff;
+}
 .bounce2 {
   animation: bounce2 2s ease infinite;
 }
