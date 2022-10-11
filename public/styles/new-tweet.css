@@ -29,8 +29,22 @@ textarea {
 
 .errorLength {
   color: red;
-  font-size: 12px;
+  background-image: linear-gradient(
+    45deg,
+    #ff000010 25%,
+    #ffffff 25%,
+    #ffffff 50%,
+    #ff00000f 50%,
+    #ff00000f 75%,
+    #ffffff 75%,
+    #ffffff 100%
+  );
+  background-size: 180.57px 180.57px;
+  font-size: 13px;
+  font-weight: 600;
   border: 4px solid red;
+  display: flex;
+  justify-content: center;
   display: none;
 }
 .errorEmptyField,
@@ -38,8 +52,20 @@ textarea {
   text-align: center;
 }
 .errorEmptyField {
+  background-image: linear-gradient(
+    45deg,
+    #ff000019 25%,
+    #ffffff 25%,
+    #ffffff 50%,
+    #ff000015 50%,
+    #ff00001a 75%,
+    #ffffff 75%,
+    #ffffff 100%
+  );
+  background-size: 180.57px 180.57px;
+  font-weight: 600;
   color: red;
-  font-size: 12px;
+  font-size: 13px;
   border: 4px solid red;
   display: flex;
   justify-content: center;

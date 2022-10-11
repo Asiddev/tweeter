@@ -1,25 +1,28 @@
 $("document").ready(function () {
   $("#write-tweet").click(function () {
-    $(".new-tweet").toggle(250);
+    return $(".new-tweet").toggle(250);
   });
 
   $("#tweet-form").submit(function (event) {
     event.preventDefault();
     let data = $(this).serialize().toString().split("=").slice(1);
+    console.log(this.data);
 
     if (data[0] === null || data[0] === "") {
-      $(".errorLength").css("display", "none");
-      return $(".errorEmptyField").css("display", "block");
+      $(".errorLength").hide(500);
+      return $(".errorEmptyField").show(1500);
     }
 
     if (data[0].length > 140) {
-      $(".errorEmptyField").css("display", "none");
-      return $(".errorLength").css("display", "block");
+      $(".errorEmptyField").hide(500);
+      return $(".errorLength").show(1500);
     }
 
     $.post("http://localhost:8080/tweets", $(this).serialize());
 
-    location.reload(true);
+    setTimeout(() => {
+      location.reload(true);
+    }, 500);
   });
 
   const loadTweets = function () {
