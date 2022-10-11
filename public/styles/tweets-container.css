@@ -22,9 +22,9 @@
 }
 
 .content-top {
-  justify-content: center;
   display: flex;
   justify-content: space-between;
+  font-weight: 400;
 }
 
 .content-top-right {
@@ -53,6 +53,7 @@
   word-break: break-all;
   font-size: 20px;
   margin-left: 1.5em;
+  font-weight: 600;
 }
 .content-bottom-icons {
   gap: 10px;
@@ -73,11 +74,11 @@
   border: none;
   display: none;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
 }
 .bottomMenu i {
-  font-size: 2em;
+  font-size: 1.5em;
   color: #fff;
 }
 
