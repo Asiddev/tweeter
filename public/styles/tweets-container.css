@@ -34,10 +34,9 @@
 }
 
 .content-top-left {
-  font-size: 20px;
-  opacity: 30%;
+  font-size: 22px;
+  color: rgba(184, 177, 199, 0.784);
   font-weight: 600;
-  color: rgb(37, 16, 114);
 }
 
 .content-bottom {
@@ -45,9 +44,14 @@
   font-size: 15px;
   border-top: 5px black solid;
 }
+.bottom-content-date {
+  margin-left: 2em;
+}
 
 .content-middle {
+  word-break: break-all;
   font-size: 20px;
+  margin-left: 1.5em;
 }
 .content-bottom-icons {
   gap: 10px;

@@ -27,3 +27,8 @@ textarea {
   align-items: center;
   font-weight: bold;
 }
+
+.error {
+  color: red;
+  font-size: 20px;
+}

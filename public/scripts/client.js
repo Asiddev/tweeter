@@ -5,59 +5,56 @@
  */
 
 $("document").ready(function () {
-  const data = [
-    {
-      user: {
-        name: "Newton",
-        avatars: "https://i.imgur.com/73hZDYK.png",
-        handle: "@SirIsaac",
-      },
-      content: {
-        text: "If I have seen further it is by standing on the shoulders of giants",
-      },
-      created_at: 1461116232227,
-    },
-    {
-      user: {
-        name: "Descartes",
-        avatars: "https://i.imgur.com/nlhLi3I.png",
-        handle: "@rd",
-      },
-      content: {
-        text: "Je pense , donc je suis",
-      },
-      created_at: 1461113959088,
-    },
-  ];
-
   $("#tweet-form").submit(function (event) {
     event.preventDefault();
+    let data = $(this).serialize().toString().split("=").slice(1);
+
+    console.log();
+    if (data[0] === null || data[0] === "") {
+      return $(".new-tweet").append(
+        alert("The tweet field cannot be left empty")
+      );
+    }
+
+    if (data[0].length > 140) {
+      return $("#tweet-form").append(
+        alert("Your tweet must only be a maximum of 140 characters")
+      );
+    }
 
     $.post(
       "http://localhost:8080/tweets",
       $(this).serialize(),
       function (data) {
         console.log(data);
+        $("#tweet-text").val("");
+        $("#tweet-count").val(144);
       }
     );
-    $("#tweet-text").val("");
+
+    location.reload(true);
   });
+
+  const loadTweets = function () {
+    $.get("http://localhost:8080/tweets", function (data) {
+      renderTweets(data);
+    });
+  };
 
   const renderTweets = function (tweets) {
     // loops through tweet
+
+    const sortedDesc = tweets.sort(
+      (objA, objB) => Number(objB.created_at) - Number(objA.created_at)
+    );
+
     const allTweetsContainer = $(".all-tweets-container");
-    for (let singleTweet of tweets) {
+
+    for (let singleTweet of sortedDesc) {
       let tweet = createTweetElement(singleTweet);
 
-      // console.log("newTweet", tweet);
-
       allTweetsContainer.append(tweet);
-
-      // $(".all-tweets-container").append();
     }
-
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
   };
 
   const createTweetElement = function (tweet) {
@@ -76,7 +73,9 @@ $("document").ready(function () {
       ${tweet.content.text}
       </div>
       <div class="content-bottom">
-      ${new Date(tweet.created_at).toDateString()}
+      <div class="bottom-content-date">
+      ${timeago.format(tweet.created_at)}
+      </div>
         <div class="content-bottom-icons">
           <i class="fa-solid fa-flag"></i>
           <i class="fa-solid fa-retweet"></i>
@@ -89,6 +88,5 @@ $("document").ready(function () {
     // ...
     return $tweet;
   };
-
-  renderTweets(data);
+  loadTweets();
 });
