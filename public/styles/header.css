@@ -13,15 +13,29 @@ header {
   color: red;
 }
 
-.logo {
-  font-size: 35px;
+.username-header {
+  font-weight: 300;
+  color: #fff;
 }
 
-.username-header {
-  color: #fff;
+.username-first-bold {
+  font-family: Source Pro Sans, sans-serif;
+  font-weight: 600;
 }
 .bounce2 {
   animation: bounce2 2s ease infinite;
+}
+
+@media (min-width: 1024px) {
+  header {
+    width: 40%;
+    height: 460px;
+    margin-left: 80px;
+    justify-content: start;
+    padding-top: 70px;
+    align-self: center;
+    margin-right: 80px;
+  }
 }
 @keyframes bounce2 {
   0%,

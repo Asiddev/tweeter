@@ -14,6 +14,10 @@ span {
   font-family: Bungee, sans-serif;
 }
 
+.logo {
+  font-size: 35px;
+}
+
 #write-tweet {
   display: flex;
   flex-direction: column;
@@ -21,4 +25,9 @@ span {
   gap: 10px;
   justify-content: center;
   font-family: Source Sans Pro, sans-serif;
+}
+@media (min-width: 1024px) {
+  #write-tweet {
+    margin-right: 60px;
+  }
 }

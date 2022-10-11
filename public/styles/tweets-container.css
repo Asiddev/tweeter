@@ -85,6 +85,13 @@
 .bounce2ButtomButton {
   animation: bounce2 2s ease infinite;
 }
+
+@media (min-width: 1024px) {
+  .bottomMenu {
+    left: 400px;
+  }
+}
+
 @keyframes bounce2 {
   0%,
   20%,

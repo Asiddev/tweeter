@@ -78,3 +78,15 @@ textarea {
   justify-content: center;
   display: none;
 }
+
+@media (min-width: 1024px) {
+  h2 {
+    display: none;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  .errorEmptyField {
+    font-size: 5px;
+  }
+}
