@@ -1,7 +1,9 @@
+/* eslint-disable no-undef */
+
 $("document").ready(function () {
   $(document).scroll(function () {
     var y = $(this).scrollTop();
-    if (y > 300) {
+    if (y > 400) {
       $(".bottomMenu").fadeIn();
     } else {
       $(".bottomMenu").fadeOut();

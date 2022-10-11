@@ -1,6 +1,9 @@
+/* eslint-disable no-undef */
+
 $("document").ready(function () {
   $("#write-tweet").click(function () {
-    return $(".new-tweet").toggle(250);
+    $(".new-tweet").toggle(250);
+    return $("#tweet-text").focus();
   });
 
   $("#tweet-form").submit(function (event) {
@@ -8,13 +11,13 @@ $("document").ready(function () {
     let data = $(this).serialize().toString().split("=").slice(1);
 
     if (data[0] === null || data[0] === "") {
-      $(".errorLength").hide(500);
-      return $(".errorEmptyField").show(1500);
+      $(".errorLength").hide(200);
+      return $(".errorEmptyField").show(1200);
     }
 
     if (data[0].length > 140) {
-      $(".errorEmptyField").hide(500);
-      return $(".errorLength").show(1500);
+      $(".errorEmptyField").hide(200);
+      return $(".errorLength").show(1200);
     }
 
     $.post("http://localhost:8080/tweets", $(this).serialize());

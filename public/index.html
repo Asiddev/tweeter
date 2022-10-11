@@ -69,7 +69,7 @@
         <div class="errorLength">
           <h1>
             🛑 Stop! Your tweet is too long! If you wanna hum here its going to
-            be 140 characters alright? 🛑
+            be a maximum of 140 characters alright? 🛑
           </h1>
         </div>
         <div class="errorEmptyField">
@@ -80,10 +80,13 @@
         </div>
 
         <form id="tweet-form">
+          <label id="tweet-text-label" for="text"
+            >What are you humming about?</label
+          >
           <textarea
+            placeholder="Type here"
             name="text"
             id="tweet-text"
-            placeholder="What are you humming about?"
           ></textarea>
           <div>
             <button type="submit">Tweet</button>
