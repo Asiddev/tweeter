@@ -16,7 +16,6 @@ button {
   color: #fff;
   background-color: #4056a1;
   font-family: Bungee, sans-serif;
-  margin-bottom: 2.5em;
   font-size: 20px;
 }
 
@@ -28,7 +27,21 @@ textarea {
   font-weight: bold;
 }
 
-.error {
+.errorLength {
   color: red;
-  font-size: 20px;
+  font-size: 12px;
+  border: 4px solid red;
+  display: none;
+}
+.errorEmptyField,
+.errorLength h1 {
+  text-align: center;
+}
+.errorEmptyField {
+  color: red;
+  font-size: 12px;
+  border: 4px solid red;
+  display: flex;
+  justify-content: center;
+  display: none;
 }

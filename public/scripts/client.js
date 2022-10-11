@@ -1,39 +1,23 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $("document").ready(function () {
-  //refresh every 60 seconds
-  setInterval(() => {
-    location.reload(true);
-  }, 60000);
+  $("#write-tweet").click(function () {
+    $(".new-tweet").toggle(250);
+  });
 
   $("#tweet-form").submit(function (event) {
     event.preventDefault();
     let data = $(this).serialize().toString().split("=").slice(1);
 
-    console.log();
     if (data[0] === null || data[0] === "") {
-      return $(".new-tweet").append(
-        alert("The tweet field cannot be left empty")
-      );
+      $(".errorLength").css("display", "none");
+      return $(".errorEmptyField").css("display", "block");
     }
 
     if (data[0].length > 140) {
-      return $("#tweet-form").append(
-        alert("Your tweet must only be a maximum of 140 characters")
-      );
+      $(".errorEmptyField").css("display", "none");
+      return $(".errorLength").css("display", "block");
     }
 
-    $.post(
-      "http://localhost:8080/tweets",
-      $(this).serialize(),
-      function (data) {
-        console.log(data);
-      }
-    );
+    $.post("http://localhost:8080/tweets", $(this).serialize());
 
     location.reload(true);
   });
@@ -45,13 +29,11 @@ $("document").ready(function () {
   };
 
   const renderTweets = function (tweets) {
-    // loops through tweet
-
+    const allTweetsContainer = $(".all-tweets-container");
+    //sort by newest to oldest tweet
     const sortedDesc = tweets.sort(
       (objA, objB) => Number(objB.created_at) - Number(objA.created_at)
     );
-
-    const allTweetsContainer = $(".all-tweets-container");
 
     for (let singleTweet of sortedDesc) {
       let tweet = createTweetElement(singleTweet);
@@ -94,7 +76,6 @@ $("document").ready(function () {
     </div>
   </div>`);
 
-    // ...
     return $tweet;
   };
   loadTweets();

@@ -4,7 +4,8 @@ nav {
   justify-content: space-between;
   height: 120px;
   width: 100vw;
-  background-color: #4056a1;
+  background-color: #004f8c;
+  background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
   color: #ffffff;
   padding: 1.5em 1.5em 1.5em 1.5em;
 }
