@@ -6,7 +6,6 @@ $("document").ready(function () {
   $("#tweet-form").submit(function (event) {
     event.preventDefault();
     let data = $(this).serialize().toString().split("=").slice(1);
-    console.log(this.data);
 
     if (data[0] === null || data[0] === "") {
       $(".errorLength").hide(500);

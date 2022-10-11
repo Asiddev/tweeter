@@ -1,4 +1,13 @@
 $("document").ready(function () {
+  $(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 300) {
+      $(".bottomMenu").fadeIn();
+    } else {
+      $(".bottomMenu").fadeOut();
+    }
+  });
+
   $("#tweet-text").keyup(function (e) {
     let charactersLeft = 140;
     let charactersUsed = 0;

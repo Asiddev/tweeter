@@ -64,3 +64,37 @@
 .content-bottom-icons i:hover {
   color: gold;
 }
+
+.bottomMenu {
+  background: rgba(255, 0, 0, 0.828);
+  position: fixed;
+  top: 800px;
+  right: 58px;
+  border: none;
+  display: none;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.bottomMenu i {
+  font-size: 30px;
+}
+
+.bounce2ButtomButton {
+  animation: bounce2 2s ease infinite;
+}
+@keyframes bounce2 {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(-10px);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+}
