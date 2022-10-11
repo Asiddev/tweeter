@@ -29,15 +29,29 @@ $("document").ready(function () {
       created_at: 1461113959088,
     },
   ];
+
+  $("#tweet-form").submit(function (event) {
+    event.preventDefault();
+
+    $.post(
+      "http://localhost:8080/tweets",
+      $(this).serialize(),
+      function (data) {
+        console.log(data);
+      }
+    );
+    $("#tweet-text").val("");
+  });
+
   const renderTweets = function (tweets) {
     // loops through tweet
-    const container = $(".all-tweets-container");
+    const allTweetsContainer = $(".all-tweets-container");
     for (let singleTweet of tweets) {
       let tweet = createTweetElement(singleTweet);
 
       // console.log("newTweet", tweet);
 
-      container.append(tweet);
+      allTweetsContainer.append(tweet);
 
       // $(".all-tweets-container").append();
     }
