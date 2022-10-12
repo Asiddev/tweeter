@@ -1,15 +1,15 @@
 .all-tweets-container {
-  height: 500px;
+  height: 50rem;
 }
 
 .single-tweets-container {
   width: 100%;
-  height: 225px;
+  height: 22.5rem;
   border: 5px black solid;
   display: flex;
   padding: 1em;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
 }
 
 .single-tweets-container:hover {
@@ -28,22 +28,22 @@
 }
 
 .content-top-right {
-  font-size: 20px;
+  font-size: 2rem;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
 }
 
 .content-top-left {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: rgba(147, 188, 241, 0.766);
   font-weight: 600;
 }
 
 .content-bottom {
   padding-top: 1em;
-  font-size: 15px;
-  border-top: 5px black solid;
+  font-size: 1.5rem;
+  border-top: 0.5rem black solid;
 }
 .bottom-content-date {
   margin-left: 2em;
@@ -51,12 +51,12 @@
 
 .content-middle {
   word-break: break-all;
-  font-size: 20px;
+  font-size: 2rem;
   margin-left: 1.5em;
   font-weight: 600;
 }
 .content-bottom-icons {
-  gap: 10px;
+  gap: 1rem;
   cursor: pointer;
   color: darkblue;
   margin-right: 2em;
@@ -69,13 +69,13 @@
 .bottomMenu {
   background: rgba(255, 0, 0, 0.565);
   position: fixed;
-  top: 500px;
-  right: 58px;
+  top: 50rem;
+  right: 5.8rem;
   border: none;
   display: none;
   border-radius: 50%;
-  width: 90px;
-  height: 90px;
+  width: 9rem;
+  height: 9rem;
   cursor: pointer;
 }
 
@@ -84,11 +84,11 @@
   position: absolute;
   text-align: center;
   color: rgba(255, 0, 0, 0.407);
-  font-size: 30px;
-  width: 30px;
-  height: 20px;
-  top: 100px;
-  right: 37px;
+  font-size: 3rem;
+  width: 3rem;
+  height: 2rem;
+  top: 10rem;
+  right: 3.7rem;
 }
 
 .bottomMenu i {
@@ -117,7 +117,7 @@
 
 @media (min-width: 1024px) {
   .bottomMenu {
-    left: 300px;
-    top: 500px;
+    left: 30rem;
+    top: 30rem;
   }
 }
