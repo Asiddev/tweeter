@@ -8,6 +8,11 @@ header {
   background-color: #004f8c;
   background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
 }
+#write-tweet {
+  border: none;
+  background-color: inherit;
+  background-image: inherit;
+}
 
 #write-tweet i {
   color: red;
@@ -28,15 +33,20 @@ header {
 
 @media (min-width: 1024px) {
   header {
-    width: 40%;
-    height: 460px;
+    width: 774px;
+    height: 371px;
     margin-left: 80px;
-    justify-content: start;
+    justify-content: end;
     padding-top: 70px;
     align-self: center;
     margin-right: 80px;
   }
+  #write-tweet {
+    background-color: #4056a1;
+    background-image: none;
+  }
 }
+
 @keyframes bounce2 {
   0%,
   20%,

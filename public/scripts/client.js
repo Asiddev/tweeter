@@ -1,9 +1,20 @@
 /* eslint-disable no-undef */
 
 $("document").ready(function () {
+  //write tweet header toggle
   $("#write-tweet").click(function () {
-    $(".new-tweet").toggle(250);
+    $(".new-tweet").toggle(300);
     return $("#tweet-text").focus();
+  });
+
+  //scroll back up button
+  $(document).scroll(function () {
+    let y = $(this).scrollTop();
+    if (y > 400) {
+      $(".bottomMenu").fadeIn();
+    } else {
+      $(".bottomMenu").fadeOut();
+    }
   });
 
   $("#tweet-form").submit(function (event) {

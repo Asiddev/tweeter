@@ -1,16 +1,10 @@
 /* eslint-disable no-undef */
 
 $("document").ready(function () {
-  $(document).scroll(function () {
-    var y = $(this).scrollTop();
-    if (y > 400) {
-      $(".bottomMenu").fadeIn();
-    } else {
-      $(".bottomMenu").fadeOut();
-    }
-  });
-
   $("#tweet-text").keyup(function (e) {
+    // let $tweetCount = $(this).children().prevObject[0].form[2];
+
+    // console.log($tweetCount.value);
     let charactersLeft = 140;
     let charactersUsed = 0;
 

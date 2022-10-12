@@ -21,7 +21,7 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: Source Sans Pro, sans-serif;
+  font-family: Source Pro Sans, sans-serif;
 }
 
 /*
@@ -40,11 +40,12 @@ main {
     justify-content: space-evenly;
     height: 100vh;
     gap: 50px;
+    font-size: 20px;
   }
   main {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     flex-direction: column;
-    width: 75%;
+    width: 90%;
   }
 }

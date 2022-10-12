@@ -13,7 +13,7 @@
 }
 
 .single-tweets-container:hover {
-  box-shadow: 7px 7px rgba(145, 134, 211, 0.423);
+  box-shadow: 10px 10px rgba(145, 134, 211, 0.423);
 }
 
 .tweets-container-content {
@@ -77,6 +77,19 @@
   width: 90px;
   height: 90px;
 }
+
+.bottomMenu::after {
+  content: "Go Up";
+  position: absolute;
+  text-align: center;
+  color: red;
+  font-size: 30px;
+  width: 30px;
+  height: 20px;
+  top: 100px;
+  right: 37px;
+}
+
 .bottomMenu i {
   font-size: 1.5em;
   color: #fff;
@@ -88,7 +101,8 @@
 
 @media (min-width: 1024px) {
   .bottomMenu {
-    left: 400px;
+    left: 300px;
+    top: 800px;
   }
 }
 
