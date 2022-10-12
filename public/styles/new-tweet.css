@@ -32,6 +32,7 @@ textarea {
   align-items: center;
   font-weight: bold;
   height: 50px;
+  resize: none;
 }
 
 .errorLength {
