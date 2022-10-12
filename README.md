@@ -52,7 +52,8 @@ Tweeter is a Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX to 
    ![Screenshot](/public/screenshots/screenshot6.png)
 
 5. Lastly, you can also try the extra features! You have probably noticed a red arrow jumping up and down in the header. Well ,this is actually a button that will enable you to hide the create tweet field so you arnt distracted from reading all your friends posts. If you do decide to write again , you can click the same button and it will reappear with focus on the input so you can be ready to tweet away!
-   ![gif](/public/gifs/readMeGif.gif)
+
+   <img src='./public/gifs/readMeGif.gif' width="250" height="200">
 
    Also once you your tweets get big enough, to the point that you need to scroll to see older tweets, you will see a red bubble jumping up and down that says "Go Up". Clicking on this will help you scroll to the very top of the page, just incase you remembered something important you wanted to tweet about!
-   ![gif](/public/gifs/readMeGif2.gif)
+   <img src='./public/gifs/readMeGif2.gif' width="400">
