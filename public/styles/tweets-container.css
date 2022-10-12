@@ -67,7 +67,7 @@
 }
 
 .bottomMenu {
-  background: rgba(255, 0, 0, 0.828);
+  background: rgba(255, 0, 0, 0.565);
   position: fixed;
   top: 500px;
   right: 58px;
@@ -83,7 +83,7 @@
   content: "Go Up";
   position: absolute;
   text-align: center;
-  color: red;
+  color: rgba(255, 0, 0, 0.407);
   font-size: 30px;
   width: 30px;
   height: 20px;
