@@ -27,7 +27,6 @@ main {
   body {
     display: flex;
     justify-content: space-evenly;
-    height: 100vh;
     gap: 5rem;
   }
   main {
@@ -35,6 +34,7 @@ main {
     justify-content: end;
     flex-direction: column;
     width: 90%;
+    height: 94rem;
     font-size: 2rem;
   }
 }

@@ -1,14 +1,14 @@
 /* eslint-disable no-undef */
 
-$("document").ready(function() {
+$("document").ready(function () {
   //header toggle button
-  $("#write-tweet").click(function() {
+  $("#write-tweet").click(function () {
     $(".new-tweet").toggle(300);
     return $("#tweet-text").focus();
   });
 
-  //scroll back up button
-  $(document).scroll(function() {
+  //scroll back up button appears once scroll is near bottom
+  $(document).scroll(function () {
     let y = $(this).scrollTop();
     if (y > 400) {
       $(".bottomMenu").fadeIn();
@@ -18,7 +18,7 @@ $("document").ready(function() {
   });
 
   //form submission handler
-  $("#tweet-form").submit(function(event) {
+  $("#tweet-form").submit(function (event) {
     event.preventDefault();
     let data = $(this).serialize().toString().split("=").slice(1);
 
@@ -40,13 +40,13 @@ $("document").ready(function() {
     }, 200);
   });
 
-  const loadTweets = function() {
-    $.get("http://localhost:8080/tweets", function(data) {
+  const loadTweets = function () {
+    $.get("http://localhost:8080/tweets", function (data) {
       renderTweets(data);
     });
   };
 
-  const renderTweets = function(tweets) {
+  const renderTweets = function (tweets) {
     const allTweetsContainer = $(".all-tweets-container");
 
     //sort by newest to oldest tweet
@@ -62,13 +62,13 @@ $("document").ready(function() {
   };
 
   //prevent attacks by checking for special characters
-  const escape = function(str) {
+  const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
-  const createTweetElement = function(tweet) {
+  const createTweetElement = function (tweet) {
     let $tweet = $(`<div class="single-tweets-container">
     <div class="tweets-container-content">
       <div class="content-top">
