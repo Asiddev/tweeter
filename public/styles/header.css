@@ -31,22 +31,6 @@ header {
   animation: bounce2 2s ease infinite;
 }
 
-@media (min-width: 1024px) {
-  header {
-    width: 774px;
-    height: 371px;
-    margin-left: 80px;
-    justify-content: end;
-    padding-top: 70px;
-    align-self: center;
-    margin-right: 80px;
-  }
-  #write-tweet {
-    background-color: #4056a1;
-    background-image: none;
-  }
-}
-
 @keyframes bounce2 {
   0%,
   20%,
@@ -60,5 +44,21 @@ header {
   }
   60% {
     transform: translateY(0px);
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    width: 774px;
+    height: 371px;
+    margin-left: 80px;
+    justify-content: end;
+    padding-top: 70px;
+    align-self: center;
+    margin-right: 80px;
+  }
+  #write-tweet {
+    background-color: #4056a1;
+    background-image: none;
   }
 }

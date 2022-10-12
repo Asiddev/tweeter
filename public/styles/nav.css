@@ -14,10 +14,6 @@ span {
   font-family: Bungee, sans-serif;
 }
 
-.logo {
-  font-size: 35px;
-}
-
 #write-tweet {
   display: flex;
   flex-direction: column;
@@ -26,6 +22,11 @@ span {
   justify-content: center;
   font-family: Source Sans Pro, sans-serif;
 }
+
+.logo {
+  font-size: 35px;
+}
+
 @media (min-width: 1024px) {
   nav {
     background-color: #4056a1;
