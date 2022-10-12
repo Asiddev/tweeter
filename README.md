@@ -31,7 +31,7 @@ Tweeter is a Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX to 
 
    Small Screen Homepage (for screen widths less than 1024px):
 
-    <img src='./public/screenshots/screenshot2.png' width="350" height="325">
+    <img src='./public/screenshots/screenshot2.png' width="350" height="425">
 
 2. Both homepages will have a place where you can write a tweet. The remaining characters avaliable
    for your tweet are displayed in the bottom right corner. This will turn red if you exceed the max.
