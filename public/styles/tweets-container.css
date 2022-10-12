@@ -69,7 +69,7 @@
 .bottomMenu {
   background: rgba(255, 0, 0, 0.828);
   position: fixed;
-  top: 800px;
+  top: 500px;
   right: 58px;
   border: none;
   display: none;
