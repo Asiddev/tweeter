@@ -34,7 +34,6 @@ $("document").ready(function () {
 
     $.post("http://localhost:8080/tweets", $(this).serialize());
 
-    //refresh window
     setTimeout(() => {
       location.reload(true);
     }, 200);
@@ -49,15 +48,10 @@ $("document").ready(function () {
   const renderTweets = function (tweets) {
     const allTweetsContainer = $(".all-tweets-container");
 
-    //sort by newest to oldest tweet
-    const sortedDesc = tweets.sort(
-      (objA, objB) => Number(objB.created_at) - Number(objA.created_at)
-    );
-
-    for (let singleTweet of sortedDesc) {
+    for (let singleTweet of tweets) {
       let tweet = createTweetElement(singleTweet);
 
-      allTweetsContainer.append(tweet);
+      allTweetsContainer.prepend(tweet);
     }
   };
 
