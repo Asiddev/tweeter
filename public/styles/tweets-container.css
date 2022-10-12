@@ -76,6 +76,7 @@
   border-radius: 50%;
   width: 90px;
   height: 90px;
+  cursor: pointer;
 }
 
 .bottomMenu::after {
@@ -98,14 +99,6 @@
 .bounce2ButtomButton {
   animation: bounce2 2s ease infinite;
 }
-
-@media (min-width: 1024px) {
-  .bottomMenu {
-    left: 300px;
-    top: 500px;
-  }
-}
-
 @keyframes bounce2 {
   0%,
   20%,
@@ -119,5 +112,12 @@
   }
   60% {
     transform: translateY(0px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .bottomMenu {
+    left: 300px;
+    top: 500px;
   }
 }

@@ -35,7 +35,7 @@ $("document").ready(function () {
 
     setTimeout(() => {
       location.reload(true);
-    }, 500);
+    }, 200);
   });
 
   const loadTweets = function () {
