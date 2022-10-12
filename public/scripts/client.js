@@ -1,14 +1,14 @@
 /* eslint-disable no-undef */
 
-$("document").ready(function () {
-  //write tweet header toggle
-  $("#write-tweet").click(function () {
+$("document").ready(function() {
+  //header toggle button
+  $("#write-tweet").click(function() {
     $(".new-tweet").toggle(300);
     return $("#tweet-text").focus();
   });
 
   //scroll back up button
-  $(document).scroll(function () {
+  $(document).scroll(function() {
     let y = $(this).scrollTop();
     if (y > 400) {
       $(".bottomMenu").fadeIn();
@@ -17,7 +17,8 @@ $("document").ready(function () {
     }
   });
 
-  $("#tweet-form").submit(function (event) {
+  //form submission handler
+  $("#tweet-form").submit(function(event) {
     event.preventDefault();
     let data = $(this).serialize().toString().split("=").slice(1);
 
@@ -33,19 +34,21 @@ $("document").ready(function () {
 
     $.post("http://localhost:8080/tweets", $(this).serialize());
 
+    //refresh window
     setTimeout(() => {
       location.reload(true);
     }, 200);
   });
 
-  const loadTweets = function () {
-    $.get("http://localhost:8080/tweets", function (data) {
+  const loadTweets = function() {
+    $.get("http://localhost:8080/tweets", function(data) {
       renderTweets(data);
     });
   };
 
-  const renderTweets = function (tweets) {
+  const renderTweets = function(tweets) {
     const allTweetsContainer = $(".all-tweets-container");
+
     //sort by newest to oldest tweet
     const sortedDesc = tweets.sort(
       (objA, objB) => Number(objB.created_at) - Number(objA.created_at)
@@ -58,13 +61,14 @@ $("document").ready(function () {
     }
   };
 
-  const escape = function (str) {
+  //prevent attacks by checking for special characters
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
-  const createTweetElement = function (tweet) {
+  const createTweetElement = function(tweet) {
     let $tweet = $(`<div class="single-tweets-container">
     <div class="tweets-container-content">
       <div class="content-top">
