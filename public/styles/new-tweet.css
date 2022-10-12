@@ -25,6 +25,10 @@ button {
   font-weight: 600;
 }
 
+.compose-title {
+  font-size: 30px;
+}
+
 .counter {
   font-family: Bungee, sans-serif;
 }
