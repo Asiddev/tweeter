@@ -2,27 +2,23 @@
 
 $("document").ready(function () {
   $("#tweet-text").keyup(function (e) {
-    // let $tweetCount = $(this).children().prevObject[0].form[2];
+    const input = $(this);
+    const text = input.val();
+    const remaining = 140 - text.length;
+    //step 1- Search upwards to find form
+    //step 2- Search down from the form to find the output class counter
 
-    // console.log($tweetCount.value);
-    let charactersLeft = 140;
-    let charactersUsed = 0;
+    let $tweetCount = $(this)
+      .parent()
+      .children()
+      .children("output[name=counter]");
 
-    if (charactersUsed < charactersLeft) {
-      if (e.key === "Backspace") {
-        charactersLeft -= this.value.length;
-        charactersUsed += this.value.length;
-      } else {
-        charactersLeft -= this.value.length;
-        charactersUsed += this.value.length;
-      }
+    $tweetCount.text(remaining);
 
-      $("#tweet-count").val(charactersLeft);
-    }
-    if (charactersLeft < 0) {
-      $("#tweet-count").css("color", "red");
+    if (remaining < 0) {
+      $tweetCount.css("color", "red");
     } else {
-      $("#tweet-count").css("color", "#545149");
+      $tweetCount.css("color", "#545149");
     }
   });
 });
