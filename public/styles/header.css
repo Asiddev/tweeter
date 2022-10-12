@@ -16,6 +16,7 @@ header {
 
 #write-tweet i {
   color: red;
+  font-size: 25px;
 }
 
 .username-header {
