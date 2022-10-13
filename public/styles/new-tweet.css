@@ -21,6 +21,14 @@ div {
   font-family: Bungee, sans-serif;
   font-size: 2rem;
   cursor: pointer;
+  border: none;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-out;
+}
+.new-tweet button:hover {
+  font-size: 2.2rem;
+  box-shadow: 0 0.7rem 0.7rem rgba(0, 0, 0, 0.4);
+  transform: scale(1.2);
 }
 .new-tweet #tweet-text {
   width: 100%;

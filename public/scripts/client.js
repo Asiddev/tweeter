@@ -20,6 +20,11 @@ $("document").ready(function () {
   //form submission handler
   $("#tweet-form").submit(function (event) {
     event.preventDefault();
+
+    //tweet audio #stretch
+    const audioTweet = new Audio("sounds/twitter-notification-sound.mp3");
+    audioTweet.volume = 0.2;
+
     let data = $(this).serialize().toString().split("=").slice(1);
 
     if (data[0] === null || data[0] === "") {
@@ -35,6 +40,9 @@ $("document").ready(function () {
     }
 
     $.post("http://localhost:8080/tweets", $(this).serialize());
+
+    //play tweet audio if post sucessful
+    audioTweet.play();
 
     setTimeout(() => {
       location.reload(true);

@@ -16,6 +16,14 @@ Tweeter is a Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX to 
 
 - Nodemon
 
+## Extras
+
+- Responsive design using Media queries and Rem units
+  `(Try it out, with zooming in and out) CMD ( + , - )`
+- SASS
+- Animations (Buttons, icons , etc)
+- Audio (Turn up the audio when clicking the tweet button)
+
 ## Getting Started
 
 - Install all dependencies (using the `npm install` command).
@@ -57,3 +65,5 @@ Tweeter is a Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX to 
 
    Also once you your tweets get big enough, to the point that you need to scroll to see older tweets, you will see a red bubble jumping up and down that says "Go Up". Clicking on this will help you scroll to the very top of the page, just incase you remembered something important you wanted to tweet about!
    <img src='./public/gifs/readMeGif2.gif' width="400">
+
+6. Thank you ! Happy Tweeting!
