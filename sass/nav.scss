@@ -1,16 +1,23 @@
+//SASS variables
+
+$base-color: #004f8c;
+$large-header-color: #4056a1;
+
+//---------------------------------------//
+
 nav {
   position: fixed;
   display: flex;
   justify-content: space-between;
   height: 12rem;
   width: 100vw;
-  background-color: #004f8c;
+  background-color: $base-color;
   background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
   color: #ffffff;
   padding: 1.5em 1.5em 1.5em 1.5em;
 
   @media (min-width: 1024px) {
-    background-color: #4056a1;
+    background-color: $large-header-color;
     background-image: none;
   }
 }

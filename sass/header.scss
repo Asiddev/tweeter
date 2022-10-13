@@ -1,3 +1,10 @@
+//SASS variables
+
+$base-color: #004f8c;
+$large-header-color: #4056a1;
+
+//---------------------------------------//
+
 header {
   display: flex;
   flex-direction: column;
@@ -5,7 +12,7 @@ header {
   align-items: center;
   height: 52rem;
   width: 100%;
-  background-color: #004f8c;
+  background-color: $base-color;
   background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
 
   @media (min-width: 1024px) {
@@ -26,7 +33,7 @@ header {
     color: red;
   }
   @media (min-width: 1024px) {
-    background-color: #4056a1;
+    background-color: $large-header-color;
     background-image: none;
   }
 }

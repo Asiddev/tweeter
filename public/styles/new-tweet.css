@@ -53,36 +53,35 @@ textarea {
   font-size: 0.8rem;
   font-weight: 600;
   border: 0.4rem solid red;
-  display: flex;
   justify-content: center;
   display: none;
 }
+.errorLength h1 {
+  text-align: center;
+}
 @media (min-width: 1024px) {
   .errorLength {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
 .errorEmptyField {
-  background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.0980392157) 25%, #ffffff 25%, #ffffff 50%, rgba(255, 0, 0, 0.0823529412) 50%, rgba(255, 0, 0, 0.1019607843) 75%, #ffffff 75%, #ffffff 100%);
-  background-size: 18.057rem 18.057rem;
-  font-weight: 600;
   color: red;
+  background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.062745098) 25%, #ffffff 25%, #ffffff 50%, rgba(255, 0, 0, 0.0588235294) 50%, rgba(255, 0, 0, 0.0588235294) 75%, #ffffff 75%, #ffffff 100%);
+  background-size: 18.057rem 18.057rem;
   font-size: 0.8rem;
+  font-weight: 600;
   border: 0.4rem solid red;
-  display: flex;
   justify-content: center;
   display: none;
 }
+.errorEmptyField h1 {
+  text-align: center;
+}
 @media (min-width: 1024px) {
   .errorEmptyField {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-}
-
-.errorEmptyField,
-.errorLength h1 {
-  text-align: center;
 }
 
 @media (min-width: 1024px) {
