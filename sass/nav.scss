@@ -1,0 +1,33 @@
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 12rem;
+  width: 100vw;
+  background-color: #004f8c;
+  background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+  color: #ffffff;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+
+  @media (min-width: 1024px) {
+    background-color: #4056a1;
+    background-image: none;
+  }
+}
+
+span {
+  font-family: Bungee, sans-serif;
+}
+
+#write-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  font-family: Source Sans Pro, sans-serif;
+}
+
+.logo {
+  font-size: 3.5rem;
+}

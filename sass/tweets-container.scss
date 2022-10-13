@@ -10,18 +10,20 @@
   padding: 1em;
   margin-bottom: 5rem;
   margin-top: 5rem;
-}
-.single-tweets-container .tweets-container-content {
-  width: 100%;
-  flex-direction: column;
-}
-.single-tweets-container .content-top {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 400;
-}
-.single-tweets-container:hover {
-  box-shadow: 0.7rem 0.7rem rgba(145, 134, 211, 0.423);
+
+  .tweets-container-content {
+    width: 100%;
+    flex-direction: column;
+  }
+  .content-top {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+  }
+
+  &:hover {
+    box-shadow: 0.7rem 0.7rem rgba(145, 134, 211, 0.423);
+  }
 }
 
 .content-top-right {
@@ -42,7 +44,6 @@
   font-size: 1.5rem;
   border-top: 0.5rem black solid;
 }
-
 .bottom-content-date {
   margin-left: 2em;
 }
@@ -53,15 +54,16 @@
   margin-left: 1.5em;
   font-weight: 600;
 }
-
 .content-bottom-icons {
   gap: 1rem;
   cursor: pointer;
   color: darkblue;
   margin-right: 2em;
-}
-.content-bottom-icons i:hover {
-  color: gold;
+  i {
+    &:hover {
+      color: gold;
+    }
+  }
 }
 
 .bottomMenu {
@@ -75,24 +77,25 @@
   width: 9rem;
   height: 9rem;
   cursor: pointer;
-}
-.bottomMenu i {
-  font-size: 1.5em;
-  color: #fff;
-}
-.bottomMenu:after {
-  content: "Go Up";
-  position: absolute;
-  text-align: center;
-  color: rgba(255, 0, 0, 0.499);
-  font-size: 3rem;
-  width: 3rem;
-  height: 2rem;
-  top: 10rem;
-  right: 3.7rem;
-}
-@media (min-width: 1024px) {
-  .bottomMenu {
+
+  i {
+    font-size: 1.5em;
+    color: #fff;
+  }
+
+  &:after {
+    content: "Go Up";
+    position: absolute;
+    text-align: center;
+    color: rgba(255, 0, 0, 0.499);
+    font-size: 3rem;
+    width: 3rem;
+    height: 2rem;
+    top: 10rem;
+    right: 3.7rem;
+  }
+
+  @media (min-width: 1024px) {
     left: 30rem;
     top: 45rem;
   }
