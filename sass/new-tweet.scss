@@ -40,7 +40,8 @@ div {
     background-color: inherit;
   }
 
-  & #tweet-count {
+  & #tweet-count,
+  .counter {
     font-family: Bungee, sans-serif;
   }
 
@@ -53,9 +54,6 @@ div {
   }
   & .compose-title {
     font-size: 3rem;
-  }
-  & .counter {
-    font-family: Bungee, sans-serif;
   }
 }
 

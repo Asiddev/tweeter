@@ -31,7 +31,8 @@ div {
   margin-bottom: 1em;
   background-color: inherit;
 }
-.new-tweet #tweet-count {
+.new-tweet #tweet-count,
+.new-tweet .counter {
   font-family: Bungee, sans-serif;
 }
 .new-tweet .errorLength {
@@ -72,9 +73,6 @@ div {
 }
 .new-tweet .compose-title {
   font-size: 3rem;
-}
-.new-tweet .counter {
-  font-family: Bungee, sans-serif;
 }
 
 @media (min-width: 1024px) {
