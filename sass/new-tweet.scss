@@ -1,36 +1,5 @@
 //SASS variables
-
-$large-header-color: #4056a1;
-$error-border: 0.4rem solid red;
-$error-border-background: linear-gradient(
-  45deg,
-  #ff000010 25%,
-  #ffffff 25%,
-  #ffffff 50%,
-  #ff00000f 50%,
-  #ff00000f 75%,
-  #ffffff 75%,
-  #ffffff 100%
-);
-
-@mixin error {
-  color: red;
-  background-image: $error-border-background;
-  background-size: 18.057rem 18.057rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  border: $error-border;
-  justify-content: center;
-  display: none;
-  h1 {
-    text-align: center;
-  }
-
-  @media (min-width: 1024px) {
-    font-size: 0.9rem;
-  }
-}
-
+@import "utilities/utilities.scss";
 //---------------------------------------//
 
 div {

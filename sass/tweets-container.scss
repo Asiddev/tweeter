@@ -1,4 +1,6 @@
-$box-shadow: 0.7rem 0.7rem rgba(145, 134, 211, 0.423);
+//SASS variables
+@import "utilities/utilities.scss";
+//---------------------------------------//
 
 .all-tweets-container {
   height: 50rem;
