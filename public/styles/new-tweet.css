@@ -3,23 +3,26 @@ div {
   justify-content: space-between;
 }
 
-button {
-  color: #fff;
-  background-color: #4056a1;
-  font-family: Bungee, sans-serif;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-textarea {
+#tweet-form textarea {
   align-items: center;
   font-weight: bold;
   height: 5rem;
   resize: none;
   font-size: 2rem;
 }
+#tweet-form #tweet-text-label {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
 
-#tweet-text {
+.new-tweet button {
+  color: #fff;
+  background-color: #4056a1;
+  font-family: Bungee, sans-serif;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.new-tweet #tweet-text {
   width: 100%;
   border: none;
   outline: none;
@@ -28,60 +31,50 @@ textarea {
   margin-bottom: 1em;
   background-color: inherit;
 }
-
-#tweet-text-label {
-  font-size: 2.5rem;
-  font-weight: 600;
-}
-
-#tweet-count {
+.new-tweet #tweet-count {
   font-family: Bungee, sans-serif;
 }
-
-.compose-title {
+.new-tweet .errorLength {
+  color: red;
+  background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.062745098) 25%, #ffffff 25%, #ffffff 50%, rgba(255, 0, 0, 0.0588235294) 50%, rgba(255, 0, 0, 0.0588235294) 75%, #ffffff 75%, #ffffff 100%);
+  background-size: 18.057rem 18.057rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 0.4rem solid red;
+  justify-content: center;
+  display: none;
+}
+.new-tweet .errorLength h1 {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .new-tweet .errorLength {
+    font-size: 0.9rem;
+  }
+}
+.new-tweet .errorEmptyField {
+  color: red;
+  background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.062745098) 25%, #ffffff 25%, #ffffff 50%, rgba(255, 0, 0, 0.0588235294) 50%, rgba(255, 0, 0, 0.0588235294) 75%, #ffffff 75%, #ffffff 100%);
+  background-size: 18.057rem 18.057rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 0.4rem solid red;
+  justify-content: center;
+  display: none;
+}
+.new-tweet .errorEmptyField h1 {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .new-tweet .errorEmptyField {
+    font-size: 0.9rem;
+  }
+}
+.new-tweet .compose-title {
   font-size: 3rem;
 }
-
-.counter {
+.new-tweet .counter {
   font-family: Bungee, sans-serif;
-}
-
-.errorLength {
-  color: red;
-  background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.062745098) 25%, #ffffff 25%, #ffffff 50%, rgba(255, 0, 0, 0.0588235294) 50%, rgba(255, 0, 0, 0.0588235294) 75%, #ffffff 75%, #ffffff 100%);
-  background-size: 18.057rem 18.057rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  border: 0.4rem solid red;
-  justify-content: center;
-  display: none;
-}
-.errorLength h1 {
-  text-align: center;
-}
-@media (min-width: 1024px) {
-  .errorLength {
-    font-size: 0.9rem;
-  }
-}
-
-.errorEmptyField {
-  color: red;
-  background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.062745098) 25%, #ffffff 25%, #ffffff 50%, rgba(255, 0, 0, 0.0588235294) 50%, rgba(255, 0, 0, 0.0588235294) 75%, #ffffff 75%, #ffffff 100%);
-  background-size: 18.057rem 18.057rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  border: 0.4rem solid red;
-  justify-content: center;
-  display: none;
-}
-.errorEmptyField h1 {
-  text-align: center;
-}
-@media (min-width: 1024px) {
-  .errorEmptyField {
-    font-size: 0.9rem;
-  }
 }
 
 @media (min-width: 1024px) {

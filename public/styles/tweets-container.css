@@ -1,6 +1,43 @@
 .all-tweets-container {
   height: 50rem;
 }
+.all-tweets-container .bounce2ButtomButton {
+  animation: bounce2 2s ease infinite;
+}
+.all-tweets-container .bottomMenu {
+  background: rgba(255, 0, 0, 0.499);
+  position: fixed;
+  top: 50rem;
+  right: 5.8rem;
+  border: none;
+  display: none;
+  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  cursor: pointer;
+}
+.all-tweets-container .bottomMenu i {
+  font-size: 1.5em;
+  color: #fff;
+}
+.all-tweets-container .bottomMenu:after {
+  content: "Go Up";
+  font-family: Bungee, sans-serif;
+  position: absolute;
+  text-align: center;
+  color: rgba(255, 0, 0, 0.499);
+  font-size: 3rem;
+  width: 3rem;
+  height: 2rem;
+  top: 10rem;
+  right: 3.7rem;
+}
+@media (min-width: 1024px) {
+  .all-tweets-container .bottomMenu {
+    left: 30rem;
+    top: 45rem;
+  }
+}
 
 .single-tweets-container {
   width: 100%;
@@ -15,89 +52,45 @@
   width: 100%;
   flex-direction: column;
 }
-.single-tweets-container .content-top {
+.single-tweets-container .tweets-container-content .content-top {
   display: flex;
   justify-content: space-between;
   font-weight: 400;
 }
-.single-tweets-container:hover {
-  box-shadow: 0.7rem 0.7rem rgba(145, 134, 211, 0.423);
-}
-
-.content-top-right {
+.single-tweets-container .tweets-container-content .content-top .content-top-right {
   font-size: 2rem;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-
-.content-top-left {
+.single-tweets-container .tweets-container-content .content-top .content-top-left {
   font-size: 2.2rem;
   color: rgba(147, 188, 241, 0.766);
   font-weight: 600;
 }
-
-.content-bottom {
-  padding-top: 1em;
-  font-size: 1.5rem;
-  border-top: 0.5rem black solid;
-}
-
-.bottom-content-date {
-  margin-left: 2em;
-}
-
-.content-middle {
+.single-tweets-container .tweets-container-content .content-middle {
   word-break: break-all;
   font-size: 2rem;
   margin-left: 1.5em;
   font-weight: 600;
 }
-
-.content-bottom-icons {
+.single-tweets-container .tweets-container-content .content-bottom {
+  padding-top: 1em;
+  font-size: 1.5rem;
+  border-top: 0.5rem black solid;
+}
+.single-tweets-container .tweets-container-content .content-bottom .bottom-content-date {
+  margin-left: 2em;
+}
+.single-tweets-container .tweets-container-content .content-bottom .content-bottom-icons {
   gap: 1rem;
   cursor: pointer;
   color: darkblue;
   margin-right: 2em;
 }
-.content-bottom-icons i:hover {
+.single-tweets-container .tweets-container-content .content-bottom .content-bottom-icons i:hover {
   color: gold;
 }
-
-.bottomMenu {
-  background: rgba(255, 0, 0, 0.565);
-  position: fixed;
-  top: 50rem;
-  right: 5.8rem;
-  border: none;
-  display: none;
-  border-radius: 50%;
-  width: 9rem;
-  height: 9rem;
-  cursor: pointer;
-}
-.bottomMenu i {
-  font-size: 1.5em;
-  color: #fff;
-}
-.bottomMenu:after {
-  content: "Go Up";
-  position: absolute;
-  text-align: center;
-  color: rgba(255, 0, 0, 0.499);
-  font-size: 3rem;
-  width: 3rem;
-  height: 2rem;
-  top: 10rem;
-  right: 3.7rem;
-}
-@media (min-width: 1024px) {
-  .bottomMenu {
-    left: 30rem;
-    top: 45rem;
-  }
-}
-
-.bounce2ButtomButton {
-  animation: bounce2 2s ease infinite;
+.single-tweets-container:hover {
+  box-shadow: 0.7rem 0.7rem rgba(145, 134, 211, 0.423);
 }

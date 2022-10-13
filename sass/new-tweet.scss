@@ -7,55 +7,56 @@ div {
   justify-content: space-between;
 }
 
-button {
-  color: #fff;
-  background-color: $large-header-color;
-  font-family: Bungee, sans-serif;
-  font-size: 2rem;
-  cursor: pointer;
+#tweet-form {
+  & textarea {
+    align-items: center;
+    font-weight: bold;
+    height: 5rem;
+    resize: none;
+    font-size: 2rem;
+  }
+  & #tweet-text-label {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
 }
 
-textarea {
-  align-items: center;
-  font-weight: bold;
-  height: 5rem;
-  resize: none;
-  font-size: 2rem;
-}
+.new-tweet {
+  & button {
+    color: #fff;
+    background-color: $large-header-color;
+    font-family: Bungee, sans-serif;
+    font-size: 2rem;
+    cursor: pointer;
+  }
 
-#tweet-text {
-  width: 100%;
-  border: none;
-  outline: none;
-  border-bottom: black 5px solid;
-  margin-top: 1.5em;
-  margin-bottom: 1em;
-  background-color: inherit;
-}
+  & #tweet-text {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: black 5px solid;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    background-color: inherit;
+  }
 
-#tweet-text-label {
-  font-size: 2.5rem;
-  font-weight: 600;
-}
+  & #tweet-count {
+    font-family: Bungee, sans-serif;
+  }
 
-#tweet-count {
-  font-family: Bungee, sans-serif;
-}
+  & .errorLength {
+    @include error;
+  }
 
-.compose-title {
-  font-size: 3rem;
-}
-
-.counter {
-  font-family: Bungee, sans-serif;
-}
-
-.errorLength {
-  @include error;
-}
-
-.errorEmptyField {
-  @include error;
+  & .errorEmptyField {
+    @include error;
+  }
+  & .compose-title {
+    font-size: 3rem;
+  }
+  & .counter {
+    font-family: Bungee, sans-serif;
+  }
 }
 
 @media (min-width: 1024px) {

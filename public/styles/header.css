@@ -1,8 +1,8 @@
 header {
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
   height: 52rem;
   width: 100%;
   background-color: #004f8c;
@@ -39,8 +39,7 @@ header {
   font-weight: 300;
   color: #fff;
 }
-
-.username-first-bold {
+.username-header .username-first-bold {
   font-family: Source Pro Sans, sans-serif;
   font-weight: 600;
 }

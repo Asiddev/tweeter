@@ -1,12 +1,13 @@
 //SASS variables
+
 @import "utilities/utilities.scss";
+
 //---------------------------------------//
 
 header {
-  display: flex;
+  @include centerMe;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
   height: 52rem;
   width: 100%;
   background-color: $base-color;
@@ -22,6 +23,7 @@ header {
     margin-right: 8rem;
   }
 }
+
 #write-tweet {
   border: none;
   background-color: inherit;
@@ -38,12 +40,13 @@ header {
 .username-header {
   font-weight: 300;
   color: #fff;
+
+  & .username-first-bold {
+    font-family: Source Pro Sans, sans-serif;
+    font-weight: 600;
+  }
 }
 
-.username-first-bold {
-  font-family: Source Pro Sans, sans-serif;
-  font-weight: 600;
-}
 .bounce2 {
   animation: bounce2 2s ease infinite;
 

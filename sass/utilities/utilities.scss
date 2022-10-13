@@ -3,10 +3,9 @@ $base-color: #004f8c;
 $large-header-color: #4056a1;
 $background-color: #f4f1ec;
 $box-shadow: 0.7rem 0.7rem rgba(145, 134, 211, 0.423);
+$button-goUp-color: rgba(255, 0, 0, 0.499);
 
-//---------------------------------------//
-
-//SASS error mixin & variables
+//ERROR variables
 $error-border: 0.4rem solid red;
 $error-border-background: linear-gradient(
   45deg,
@@ -18,6 +17,16 @@ $error-border-background: linear-gradient(
   #ffffff 75%,
   #ffffff 100%
 );
+
+//---------------------------------------//
+
+//SASS centerMe mixin
+@mixin centerMe {
+  display: flex;
+  align-items: center;
+}
+
+//SASS ERROR mixin
 
 @mixin error {
   color: red;
