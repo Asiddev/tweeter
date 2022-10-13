@@ -24,6 +24,11 @@ nav {
 
   & .logo {
     font-size: 3.5rem;
+
+    & .logo-img {
+      width: 5rem;
+      height: 5rem;
+    }
   }
 
   & span {

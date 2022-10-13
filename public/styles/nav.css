@@ -21,6 +21,10 @@ nav #write-tweet {
 nav .logo {
   font-size: 3.5rem;
 }
+nav .logo .logo-img {
+  width: 5rem;
+  height: 5rem;
+}
 nav span {
   font-family: Bungee, sans-serif;
 }
