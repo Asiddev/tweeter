@@ -22,17 +22,21 @@ $("document").ready(function () {
     event.preventDefault();
 
     //tweet audio #stretch
-    const audioTweet = new Audio("sounds/twitter-notification-sound.mp3");
-    audioTweet.volume = 0.2;
+    const audioSuccess = new Audio("sounds/twitter-success.mp3");
+    const audioFailure = new Audio("sounds/twitter-error.mp3");
+    audioSuccess.volume = 0.1;
+    audioFailure.volume = 0.1;
 
     let data = $(this).serialize().toString().split("=").slice(1);
 
     if (data[0] === null || data[0] === "") {
+      audioFailure.play();
       $(".errorLength").hide(200);
       return $(".errorEmptyField").show(1200);
     }
 
     if (data[0].length > 140) {
+      audioFailure.play();
       //hide other error
       $(".errorEmptyField").hide(200);
       //display new error
@@ -42,7 +46,7 @@ $("document").ready(function () {
     $.post("http://localhost:8080/tweets", $(this).serialize());
 
     //play tweet audio if post sucessful
-    audioTweet.play();
+    audioSuccess.play();
 
     setTimeout(() => {
       location.reload(true);
