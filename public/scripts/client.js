@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 
 $("document").ready(function () {
+  $("#tweet-text").focus();
   //header toggle button
   $("#write-tweet").click(function () {
     $(".new-tweet").toggle(300);
