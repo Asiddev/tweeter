@@ -1,4 +1,4 @@
-# TinyApp Project
+# Tweeter Project
 
 Tweeter is a Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX to help create a Twitter clone with a very responsive design
 
