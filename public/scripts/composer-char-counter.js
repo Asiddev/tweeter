@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 
-$("document").ready(function () {
-  $("#tweet-text").keyup(function () {
+$("document").ready(function() {
+  $("#tweet-text").keyup(function() {
     const input = $(this);
     const text = input.val();
 
