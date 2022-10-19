@@ -1,17 +1,13 @@
 /* eslint-disable no-undef */
 
-$("document").ready(function() {
-  $("#tweet-text").keyup(function() {
+$("document").ready(function () {
+  $("#tweet-text").keyup(function () {
     const input = $(this);
     const text = input.val();
 
     const remainingCharacters = 140 - text.length;
 
-    let $tweetCount = $(this)
-      .parent()
-      .children()
-      .children("output[name=counter]");
-
+    let $tweetCount = $(this).parent().find(".counter");
     $tweetCount.text(remainingCharacters);
 
     if (remainingCharacters < 0) {
