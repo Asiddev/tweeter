@@ -38,6 +38,7 @@ main {
     width: 90%;
     height: 94rem;
     font-size: 2rem;
-    padding-right: 10rem;
+    padding-right: 8rem;
+    padding-bottom: 3rem;
   }
 }
