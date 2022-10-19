@@ -29,13 +29,13 @@ Tweeter is a Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX to 
 
 ## Using Tweeter
 
-1. Once you visit localhost:8080, you will be greeted with Tweeters homepage. Depending on your device , the homepage will have a different style.
+1.Tweeters homepage. Depending on your device , the homepage will have a different style.
 
-   Large Screen Homepage (for screen widths of 1024px or more):
+Large Screen Homepage (for screen widths of 1024px or more):
 
-   ![Screenshot](./documents/screenshots/screenshot1.png)
+![Screenshot](./documents/screenshots/screenshot1.png)
 
-   Small Screen Homepage (for screen widths less than 1024px):
+Small Screen Homepage (for screen widths less than 1024px):
 
     <img src='./documents/screenshots/screenshot2.png' width="350" height="425">
 
@@ -57,11 +57,4 @@ Tweeter is a Single Page App (SPA) built with HTML, CSS, JS, jQuery and AJAX to 
    Empty Fields Error:
    ![Screenshot](./documents/screenshots/screenshot6.png)
 
-5. Lastly, you can also try the extra features! You have probably noticed a red arrow jumping up and down in the header. Well ,this is actually a button that will enable you to hide the create tweet field so you arnt distracted from reading all your friends posts. If you do decide to write again , you can click the same button and it will reappear with focus on the input so you can be ready to tweet away!
-
-   <img src='./documents/gifs/readMeGif.gif' width="350" height="300">
-
-   Also once you your tweets get big enough, to the point that you need to scroll to see older tweets, you will see a red bubble jumping up and down that says "Go Up". Clicking on this will help you scroll to the very top of the page, just incase you remembered something important you wanted to tweet about!
-   <img src='./documents/gifs/readMeGif2.gif' width="400">
-
-6. Thank you ! Happy Tweeting!
+5. Thank you ! Happy Tweeting!
