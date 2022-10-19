@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 
 $("document").ready(function () {
-  //scroll back up button appears once scroll is near bottom
   //header toggle button
   $("#write-tweet").click(function () {
     $(".new-tweet").toggle(300);
@@ -59,8 +58,6 @@ $("document").ready(function () {
   const loadTweets = function () {
     $.get("/tweets/", function (newTweet) {
       renderTweets(newTweet.reverse());
-    }).catch((err) => {
-      console.log(err);
     });
   };
 
@@ -88,9 +85,8 @@ $("document").ready(function () {
     $.post("/tweets/", newTweet, () => {
       $(this).find("#tweet-text").val("");
       $(this).find(".counter").val(140);
+    }).then(function () {
       loadTweets();
-    }).catch((err) => {
-      console.log(err);
     });
   });
 });
