@@ -58,6 +58,8 @@ $("document").ready(function () {
   const loadTweets = function () {
     $.get("/tweets/", function (newTweet) {
       renderTweets(newTweet.reverse());
+    }).catch((err) => {
+      console.log(err.message);
     });
   };
 
@@ -85,8 +87,12 @@ $("document").ready(function () {
     $.post("/tweets/", newTweet, () => {
       $(this).find("#tweet-text").val("");
       $(this).find(".counter").val(140);
-    }).then(function () {
-      loadTweets();
-    });
+    })
+      .then(function () {
+        loadTweets();
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
   });
 });
