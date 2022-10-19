@@ -1,19 +1,7 @@
 /* eslint-disable no-undef */
 
 $("document").ready(function () {
-  $(".errorLength").hide(200);
   //scroll back up button appears once scroll is near bottom
-  $(document).scroll(function () {
-    let y = $(this).scrollTop();
-    console.log(y);
-    if (y > 400) {
-      console.log("WOO!");
-      console.log($(".bottomMenu"));
-      $(".bottomMenu").fadeIn();
-    } else {
-      $(".bottomMenu").fadeOut();
-    }
-  });
   //header toggle button
   $("#write-tweet").click(function () {
     $(".new-tweet").toggle(300);
