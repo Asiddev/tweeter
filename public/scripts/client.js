@@ -71,6 +71,8 @@ $("document").ready(function () {
   const loadTweets = function () {
     $.get("/tweets/", function (newTweet) {
       renderTweets(newTweet.reverse());
+    }).catch((err) => {
+      console.log(err);
     });
   };
 
@@ -99,6 +101,8 @@ $("document").ready(function () {
       $(this).find("#tweet-text").val("");
       $(this).find(".counter").val(140);
       loadTweets();
+    }).catch((err) => {
+      console.log(err);
     });
   });
 });
