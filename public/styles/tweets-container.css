@@ -51,7 +51,6 @@
 .single-tweets-container .tweets-container-content {
   width: 100%;
   flex-direction: column;
-  padding-right: 50px;
 }
 .single-tweets-container .tweets-container-content .content-top {
   display: flex;
