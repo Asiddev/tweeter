@@ -3,6 +3,9 @@ div {
   justify-content: space-between;
 }
 
+#tweet-form {
+  margin-top: 5rem;
+}
 #tweet-form textarea {
   align-items: center;
   font-weight: bold;
